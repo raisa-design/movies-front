@@ -71,36 +71,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
   gap: 15px;
-}
 
-.buttonActionMovie {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #00925d;
-  color: #f0f0f0;
-  font-size: 0.875rem;
-  cursor: pointer;
-}
-
-.buttonActionMovie:hover {
-  background-color: #007d54;
-}
-
-.buttonListMovie {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #f0f0f0;
-  font-size: 0.875rem;
-  cursor: pointer;
-}
-
-.buttonListMovie:hover {
-  background-color: rgba(0, 146, 93, 0.1);
+  padding-top: 30px;
 }

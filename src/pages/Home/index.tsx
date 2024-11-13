@@ -1,4 +1,6 @@
 import screenBackground from "../../assets/background.png";
+import play from "../../assets/play.png";
+import Button from "../../components/Button";
 //import "../../Reset.css";
 import "./styles.css";
 
@@ -20,8 +22,13 @@ export default function Home() {
           </p>
         </div>
         <div className="buttonsMain">
-          <button className="buttonActionMovie">Ver Trailer</button>
-          <button className="buttonListMovie">Adicionar na minha lista</button>
+          {/* <button className="buttonActionMovie">
+            <img src={play} alt="" height={30} width={30} />
+            Ver Trailer
+          </button> */}
+          <Button icon={play} text="Ver Trailer" className="buttonActionMovie" />
+          <Button text="Adicionar na minha lista" className="buttonListMovie" variant="secondary" />
+          <Button text="Adicionar na minha lista" className="buttonListMovie" variant="danger" />
         </div>
       </div>
     </>
