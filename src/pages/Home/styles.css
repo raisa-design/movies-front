@@ -42,20 +42,31 @@
   display: block;
 }
 
+.mainInfoGeneral {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .mainInfo {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: -150px;
   color: #f0f0f0;
 }
 
 .mainInfo h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.1rem;
+  margin: 16px 0 10px 0;
   color: #ffffff;
 }
 
@@ -64,14 +75,37 @@
   color: #aaaaaa;
 }
 
+.buttonActionCategory {
+  display: flex;
+  background-color: #4b4747;
+  border-radius: 4rem;
+  padding: 5px 20px;
+}
+
 .buttonsMain {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   gap: 15px;
-
   padding-top: 30px;
+}
+
+.buttonsAlternatives {
+  position: absolute;
+  right: 20px;
+  top: 70%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.buttonsWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,36 +1,36 @@
 .button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: #f0f0f0;
-    font-size: 0.875rem;
-    cursor: pointer;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #f0f0f0;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
 .primary {
-    background-color: #00925d;
+  background-color: #00925d;
 }
 
 .primary:hover {
-    background-color: #007d54;
+  background-color: #007d54;
 }
 
 .secondary {
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    color: #f0f0f0;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #f0f0f0;
 }
 
 .secondary:hover {
-    background-color: rgba(0, 146, 93, 0.1);
+  background-color: rgba(0, 146, 93, 0.1);
 }
 
 .danger {
-    border: 1px solid red;
-    background-color: red;
-    color: #f0f0f0;
+  border: 1px solid rgb(95, 90, 90);
+  background-color: rgb(0, 0, 0);
+  color: #f0f0f0;
 }
