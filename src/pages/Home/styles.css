@@ -4,6 +4,99 @@
   box-sizing: border-box;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerNav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.buttonNav {
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.buttonNav:hover {
+  color: #00925d;
+}
+
+.search {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: white;
+  margin-right: 1rem;
+  width: 200px;
+}
+
+.search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.buttonNotification {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.headerUser {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.buttonUser {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.buttonUser:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .main {
   background-color: #000000;
   position: relative;
