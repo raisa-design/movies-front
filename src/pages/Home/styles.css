@@ -54,6 +54,16 @@
 .buttonNav:hover {
   color: #00925d;
 }
+.searchIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.searchIcon.expanded {
+  transform: scale(1.2);
+}
 
 .search {
   background-color: rgba(255, 255, 255, 0.1);
