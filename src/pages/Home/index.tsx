@@ -4,10 +4,14 @@ import save from "../../assets/save.png";
 import download from "../../assets/download.png";
 import share from "../../assets/share.png";
 import like from "../../assets/like.png";
+import logo from "../../assets/logo.png";
 import user from "../../assets/user.png";
 import search from "../../assets/search.png";
+import bell from "../../assets/bell.png";
 
 import Button from "../../components/Button";
+import ProfileDropdown from "../../components/DropDown";
+
 import { useState } from "react";
 
 //import "../../Reset.css";
@@ -24,10 +28,7 @@ export default function Home() {
     <>
       <div className="header">
         <div className="headerLogo">
-          <h1 className="logo">
-            <span className="logo-icon">SS</span>
-            SaintStream
-          </h1>
+          <img src={logo} alt="" />
         </div>
 
         <div className="headerNav">
@@ -49,14 +50,12 @@ export default function Home() {
           {isSearchExpanded && (
             <input type="text" className="search" placeholder="Search" />
           )}
-
-          <Button
-            text=""
-            icon="notification-icon"
-            className="buttonNotification"
-          />
+          <button className="bellIcon">
+            <img src={bell} alt="Bell" />
+          </button>
           <div className="headerUser">
             <img src={user} alt="User" className="userAvatar" />
+            <ProfileDropdown />
           </div>
         </div>
       </div>

@@ -22,19 +22,21 @@
   );
 }
 
-.headerLogo {
+.headerControls {
   display: flex;
+  gap: 1rem;
   align-items: center;
 }
 
-.logo {
-  color: #ffffff;
-  font-size: 1.5rem;
+.headerLogo {
+  position: relative;
+  display: flex;
+  align-items: center;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0 55px;
 }
-
 .headerNav {
   display: flex;
   gap: 2rem;
@@ -79,7 +81,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.buttonNotification {
+.bellIcon {
   background: none;
   border: none;
   color: white;
