@@ -34,3 +34,43 @@
   background-color: rgb(0, 0, 0);
   color: #f0f0f0;
 }
+
+/* Media Queries para Button */
+@media screen and (max-width: 1024px) {
+  .button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+
+  .button img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    gap: 6px;
+  }
+
+  .buttonActionMovie,
+  .buttonListMovie {
+    padding: 4px 10px;
+  }
+
+  .button img {
+    width: 14px;
+    height: 14px;
+  }
+}
