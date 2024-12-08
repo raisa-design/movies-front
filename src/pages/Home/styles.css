@@ -263,6 +263,7 @@
 
   .mainInfo {
     margin-top: -100px;
+    align-items: flex-start;
   }
 
   .mainInfo h1 {
@@ -289,6 +290,7 @@
 
   .buttonsWrapper {
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
   }
 
@@ -307,7 +309,7 @@
   }
 
   .headerLogo {
-    padding: 0 10px;
+    padding: 0 1px;
   }
 
   .headerUser {

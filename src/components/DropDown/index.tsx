@@ -7,7 +7,7 @@ import {
   SwitchCamera,
   Menu,
 } from "lucide-react";
-import Button from "../Button";
+// import Button from "../Button";
 import arrow from "../../assets/ArrowDown.png";
 import "./styles.css";
 
@@ -18,13 +18,13 @@ const ProfileDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const navigationItems = [
-    { text: "Home" },
-    { text: "Discover" },
-    { text: "Movie Release" },
-    { text: "Forum" },
-    { text: "About" },
-  ];
+  // const navigationItems = [
+  //   { text: "Home" },
+  //   { text: "Discover" },
+  //   { text: "Movie Release" },
+  //   { text: "Forum" },
+  //   { text: "About" },
+  // ];
 
   const menuItems = [
     { icon: <User size={20} />, text: "Gerenciar Perfis", action: () => {} },
@@ -52,13 +52,13 @@ const ProfileDropdown = () => {
       {isOpen && (
         <div className="profile-dropdown-menu">
           <div className="mobile-nav">
-            {navigationItems.map((item, index) => (
+            {/* {navigationItems.map((item, index) => (
               <Button
                 key={index}
                 text={item.text}
                 className="buttonNav mobile"
               />
-            ))}
+            ))} */}
           </div>
           <div className="dropdown-divider"></div>
           {menuItems.map((item, index) => (
