@@ -11,17 +11,35 @@ import bell from "../../assets/bell.png";
 
 import Button from "../../components/Button";
 import ProfileDropdown from "../../components/DropDown";
-
-import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 //import "../../Reset.css";
 import "./styles.css";
 
 export default function Home() {
+  const navigate = useNavigate();
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   const handleSearchClick = () => {
-    setIsSearchExpanded(!isSearchExpanded);
+    if (isMobileView) {
+      navigate("/search");
+    } else {
+      setIsSearchExpanded(!isSearchExpanded);
+    }
   };
 
   return (
@@ -47,7 +65,7 @@ export default function Home() {
             <img src={search} alt="Search" />
           </button>
 
-          {isSearchExpanded && (
+          {!isMobileView && isSearchExpanded && (
             <input type="text" className="search" placeholder="Search" />
           )}
           <button className="bellIcon">
