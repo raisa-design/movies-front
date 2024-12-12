@@ -1,16 +1,4 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li,
-button,
-input {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,8 +24,8 @@ input {
 
 .headerControls {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
 }
 
 .headerLogo {
@@ -66,9 +54,9 @@ input {
   transition: color 0.3s ease;
 }
 
-.buttonNav:hover {
+/* .buttonNav:hover {
   color: #00925d;
-}
+} */
 
 .searchIcon {
   background: none;

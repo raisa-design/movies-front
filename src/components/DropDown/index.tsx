@@ -6,8 +6,12 @@ import {
   LogOut,
   SwitchCamera,
   Menu,
+  Home,
+  Compass,
+  Film,
+  MessageCircle,
+  Info,
 } from "lucide-react";
-// import Button from "../Button";
 import arrow from "../../assets/ArrowDown.png";
 import "./styles.css";
 
@@ -18,13 +22,13 @@ const ProfileDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  // const navigationItems = [
-  //   { text: "Home" },
-  //   { text: "Discover" },
-  //   { text: "Movie Release" },
-  //   { text: "Forum" },
-  //   { text: "About" },
-  // ];
+  const navigationItems = [
+    { icon: <Home size={20} />, text: "Home", action: () => {} },
+    { icon: <Compass size={20} />, text: "Discover", action: () => {} },
+    { icon: <Film size={20} />, text: "Movie Release", action: () => {} },
+    { icon: <MessageCircle size={20} />, text: "Forum", action: () => {} },
+    { icon: <Info size={20} />, text: "About", action: () => {} },
+  ];
 
   const menuItems = [
     { icon: <User size={20} />, text: "Gerenciar Perfis", action: () => {} },
@@ -52,18 +56,24 @@ const ProfileDropdown = () => {
       {isOpen && (
         <div className="profile-dropdown-menu">
           <div className="mobile-nav">
-            {/* {navigationItems.map((item, index) => (
-              <Button
-                key={index}
-                text={item.text}
-                className="buttonNav mobile"
-              />
-            ))} */}
+            {navigationItems.map((item, index) => (
+              <button
+                key={`nav-${index}`}
+                className="profile-dropdown-item"
+                onClick={() => {
+                  item.action();
+                  setIsOpen(false);
+                }}
+              >
+                {item.icon}
+                <span>{item.text}</span>
+              </button>
+            ))}
           </div>
           <div className="dropdown-divider"></div>
           {menuItems.map((item, index) => (
             <button
-              key={index}
+              key={`menu-${index}`}
               className="profile-dropdown-item"
               onClick={() => {
                 item.action();
