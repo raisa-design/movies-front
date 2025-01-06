@@ -4,79 +4,16 @@ import save from "../../assets/save.png";
 import download from "../../assets/download.png";
 import share from "../../assets/share.png";
 import like from "../../assets/like.png";
-import logo from "../../assets/logo.png";
-import user from "../../assets/user.png";
-import search from "../../assets/search.png";
-import bell from "../../assets/bell.png";
 
 import Button from "../../components/Button";
-import ProfileDropdown from "../../components/DropDown";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-//import "../../Reset.css";
+import "../../Reset.css";
 import "./styles.css";
+import Header from "../../components/Header";
 
 export default function Home() {
-  const navigate = useNavigate();
-  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobileView(window.innerWidth <= 768);
-    };
-
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
-  }, []);
-
-  const handleSearchClick = () => {
-    if (isMobileView) {
-      navigate("/search");
-    } else {
-      setIsSearchExpanded(!isSearchExpanded);
-    }
-  };
-
   return (
     <>
-      <div className="header">
-        <div className="headerLogo">
-          <img src={logo} alt="" />
-        </div>
-
-        <div className="headerNav">
-          <Button text="Home" className="buttonNav" />
-          <Button text="Discover" className="buttonNav" />
-          <Button text="Movie Release" className="buttonNav" />
-          <Button text="Forum" className="buttonNav" />
-          <Button text="About" className="buttonNav" />
-        </div>
-
-        <div className="headerControls">
-          <button
-            className={`searchIcon ${isSearchExpanded ? "expanded" : ""}`}
-            onClick={handleSearchClick}
-          >
-            <img src={search} alt="Search" />
-          </button>
-
-          {!isMobileView && isSearchExpanded && (
-            <input type="text" className="search" placeholder="Search" />
-          )}
-          <button className="bellIcon">
-            <img src={bell} alt="Bell" />
-          </button>
-          <div className="headerUser">
-            <img src={user} alt="User" className="userAvatar" />
-            <ProfileDropdown />
-          </div>
-        </div>
-      </div>
+      <Header />
       <div className="main">
         <div className="mainScreen">
           <img
