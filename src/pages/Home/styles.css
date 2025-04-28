@@ -177,7 +177,101 @@
   justify-content: space-between;
   align-items: center;
 }
+.storyLine {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 auto;
+  height: 100px;
+}
+.storyLine h1 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 0 100px;
+  padding-bottom: 10px;
+}
+.storyLine p {
+  font-size: 1rem;
+  color: #aaaaaa;
+  padding: 0 100px;
+  line-height: 18px;
+}
+.more {
+  color: #00925d;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.topCast {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 auto;
+  height: 100px;
+}
+.topCastTitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 0 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.actors {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  align-items: center;
+  gap: 25px;
+  margin-left: 100px;
+}
 
+.actorsImage img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.actorsName {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.actorsName h1 {
+  color: #ffffff;
+}
+.actorsName p {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  line-height: 18px;
+}
+
+.midfieldNav {
+  color: aqua;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  align-items: center;
+  gap: 25px;
+  margin-left: 100px;
+}
+.buttonNavMidfield {
+  background-color: transparent;
+  border: none;
+  color: #5a5454;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+.buttonNavMidfield.primary:hover {
+  background-color: #00925d !important; /* Mesmo cor base sem efeito hover */
+}
 @media screen and (max-width: 1024px) {
   .mainInfo h1 {
     font-size: 1.8rem;
